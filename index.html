@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="ADPM : Active Deformable Part Models" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>ADPM</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/dreamdragon/ADPM">View on GitHub</a>
+
+          <h1 id="project_title">ADPM</h1>
+          <h2 id="project_tagline">Active Deformable Part Models</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/dreamdragon/ADPM/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/dreamdragon/ADPM/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>
+<a name="about" class="anchor" href="#about"><span class="octicon octicon-link"></span></a>About</h2>
+
+<p>Active Deformable Part Models is an active approach for part-based object detection, which optimizes the order of part filter evaluations and the time at which to stop and make a prediction. During inference, a learned policy is used as a look-up table to choose the part order and the stopping time based on the observed filter responses.</p>
+
+<h2>
+<a name="autorights" class="anchor" href="#autorights"><span class="octicon octicon-link"></span></a>AUTORIGHTS</h2>
+
+<p>Copyright (C) 2013-2014 Menglong Zhu, Nikolay Atanasov,
+                        Samarth Brahmbhatt</p>
+
+<p>This file is part of the Active Deformable Part Models code </p>
+
+<pre><code>(http://cis.upenn.edu/~menglong/adpm.html) 
+</code></pre>
+
+<p>and is available under the terms of an MIT-like license provided in COPYING. Please retain this notice and COPYING if you use this file (or a portion of it) in your project. </p>
+
+<h2>
+<a name="demo" class="anchor" href="#demo"><span class="octicon octicon-link"></span></a>Demo</h2>
+
+<p>To run the demo, simply run the following in MATLAB:</p>
+
+<pre><code>&gt;&gt; demo_pca_policy
+</code></pre>
+
+<p>The code assumes mex is setup in the system. If not,
+the pre-compiled Linux 64-bit and MacOSX 64-bit mex 
+binaries are already provided under <code>./bin</code> folder.</p>
+
+<p>Note: You can comment out <code>pca_policy_compile;</code>
+at line 21 in <code>demo_pca_policy.m</code>, if having trouble 
+compiling the code on your Linux/Mac system.</p>
+
+<p>The demo will show the top ADPM detection of person 
+and car in the example images.</p>
+
+<h2>
+<a name="api" class="anchor" href="#api"><span class="octicon octicon-link"></span></a>API</h2>
+
+<p>Standalone API for detecting a class of object is 
+provided as the following function call:</p>
+
+<pre><code>&gt;&gt; ds = detect_object(image_file, object_class, display)
+</code></pre>
+
+<p>where the input/output arguments are </p>
+
+<pre><code>image_file:     image file path 
+object_class:   object class name
+display:        boolean flag of displaying top detection 
+ds:             detection bounding boxes with scores
+</code></pre>
+
+<h2>
+<a name="models" class="anchor" href="#models"><span class="octicon octicon-link"></span></a>Models</h2>
+
+<p>Currently person and car models are provided. More PASCAL VOC models will be available soon.</p>
+
+<h2>
+<a name="source-code" class="anchor" href="#source-code"><span class="octicon octicon-link"></span></a>Source Code</h2>
+
+<p>Our implementation is based on the publicly available original DPM and Cascade-DPM code.</p>
+
+<p>Main source code is in <code>./src</code> and <code>./mex</code> folder. The main detection process is implemented in </p>
+
+<pre><code>./mex/detect_pca_policy.cc
+</code></pre>
+
+<p>Files under <code>./external</code> are a subset of publicly available DPM code, refer to <code>./external/README</code> for copyright.</p>
+
+<p>Original VOC DPM models and learned policies are contained in <code>./models</code>.</p>
+
+<h2>
+<a name="contact" class="anchor" href="#contact"><span class="octicon octicon-link"></span></a>Contact</h2>
+
+<p>Please direct all questions to:</p>
+
+<p>Menglong Zhu <a href="mailto:menglong@cis.upenn.edu">menglong@cis.upenn.edu</a></p>
+
+<p><a href="http://cis.upenn.edu/%7Emenglong">http://cis.upenn.edu/~menglong</a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">ADPM maintained by <a href="https://github.com/dreamdragon">dreamdragon</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
