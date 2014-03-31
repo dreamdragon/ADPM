@@ -1,0 +1,73 @@
+========================================================
+             Active Deformable Part Models
+========================================================
+
+AUTORIGHTS
+-------------------------------------------------------
+Copyright (C) 2013-2014 Menglong Zhu, Nikolay Atanasov,
+                        Samarth Brahmbhatt
+
+This file is part of the Active Deformable Part Models 
+code (http://cis.upenn.edu/~menglong/adpm.html)
+and is available under the terms of an MIT-like license
+provided in COPYING. Please retain this notice and
+COPYING if you use this file (or a portion of it) in
+your project.
+-------------------------------------------------------
+
+------- Demo ------------------------------------------
+To run the demo, simply run the following in MATLAB:
+
+>> demo_pca_policy
+
+The code assumes mex is setup in the system. If not,
+the pre-compiled Linux 64-bit and MacOSX 64-bit mex 
+binaries are provided under ./bin folder.
+(Note: You can comment out 'pca_policy_compile;'
+at line 21 in demo_pca_policy.m, if having trouble 
+compiling the code on your Linux/Mac system.) 
+
+The demo will show the top ADPM detection of person 
+and car in the example images.
+
+------- API -------------------------------------------
+Standalone API for detecting a class of object is 
+provided as the following function call:
+
+>> ds = detect_object(image_file, object_class, display)
+
+where the input arguments are 
+image_file:     image file path 
+object_class:   object class name
+display:        boolean flag of displaying top detection 
+                <default: 1>
+
+and output ds is detection bounding boxes with scores
+
+------- Models ----------------------------------------
+Currently person and car models are provided. More
+PASCAL VOC models will be added in the near future.
+
+------- Source Code -----------------------------------
+Our implementation is based on the publicly available 
+original DPM and Cascade-DPM code.
+
+Main source code is in ./src and ./mex folder. The 
+main detection process is implemented in 
+./mex/detect_pca_policy.cc
+
+Files under ./external are a subset of publicly 
+available DPM code, refer to ./external/README
+for copyright.
+
+Original VOC DPM models and learned policies are
+contained in ./models.
+
+------- Contact --------------------------------------
+Please direct all questions to:
+
+Menglong Zhu <menglong@cis.upenn.edu>
+http://cis.upenn.edu/~menglong
+
+
+
