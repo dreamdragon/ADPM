@@ -13,6 +13,14 @@ and is available under the terms of an MIT-like license
 provided in COPYING. Please retain this notice and
 COPYING if you use this file (or a portion of it) in
 your project.
+
+If you are using the code, please cite the following 
+technical report:
+
+Active Deformable Part Models, Menglong Zhu, Nikolay 
+Atanasov, George Pappas and Kostas Daniilidis, arXiv:
+1404.0334 [cs.CV]
+
 -------------------------------------------------------
 
 ------- Demo ------------------------------------------
@@ -36,17 +44,20 @@ provided as the following function call:
 
 >> ds = detect_object(image_file, object_class, display)
 
-where the input arguments are 
+where the input/output arguments are
+
 image_file:     image file path 
 object_class:   object class name
 display:        boolean flag of displaying top detection 
-                <default: 1>
+ds:             detecting bounding boxes with scores
 
-and output ds is detection bounding boxes with scores
 
 ------- Models ----------------------------------------
-Currently person and car models are provided. More
-PASCAL VOC models will be added in the near future.
+Original VOC DPM models and learned policies are
+contained in ./models.
+
+Currently, person and car models are provided. More
+PASCAL VOC models will be available soon.
 
 ------- Source Code -----------------------------------
 Our implementation is based on the publicly available 
@@ -60,8 +71,6 @@ Files under ./external are a subset of publicly
 available DPM code, refer to ./external/README
 for copyright.
 
-Original VOC DPM models and learned policies are
-contained in ./models.
 
 ------- Contact --------------------------------------
 Please direct all questions to:
