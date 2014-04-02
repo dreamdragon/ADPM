@@ -47,16 +47,20 @@ function [ ds ] = detect_object( impath, cls, DISPLAY )
     
 
     im = imread(impath);
-    
-    
-    ds = detect(im, model, policy, pca_policy);
 
-    % Display detection
+    % Display image 
     if DISPLAY
         clf;
         imagesc(im);
         axis image;
         axis off;
+    end
+    
+    % Perform object detection
+    ds = detect(im, model, policy, pca_policy);
+
+    % Display detection
+    if DISPLAY
         showboxes(im, ds(1,1:4));
         title('ADPM top detections');
     end
