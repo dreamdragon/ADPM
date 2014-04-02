@@ -62,7 +62,7 @@ function [ ds ] = detect_object( impath, cls, DISPLAY )
     % Display detection
     if DISPLAY
         showboxes(im, ds(1,1:4));
-        title('ADPM top detections');
+        title('ADPM top detection');
     end
 end
 
