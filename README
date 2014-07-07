@@ -14,11 +14,14 @@ provided in COPYING. Please retain this notice and
 COPYING if you use this file (or a portion of it) in
 your project.
 
-If you are using the code, please cite the following 
-technical report:
+If you are using the code, please cite the followings:
+
+Active Deformable Part Models Inference, Menglong Zhu, 
+Nikolay Atanasov, George Pappas and Kostas Daniilidis, 
+European Conference on Computer Vision (ECCV) 2014.
 
 Active Deformable Part Models, Menglong Zhu, Nikolay 
-Atanasov, George Pappas and Kostas Daniilidis, arXiv:
+Atanasov, George J. Pappas and Kostas Daniilidis, arXiv:
 1404.0334 [cs.CV]
 
 -------------------------------------------------------
