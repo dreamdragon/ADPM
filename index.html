@@ -2,9 +2,9 @@
 <html>
 
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="ADPM : Active Deformable Part Models" />
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="ADPM : Fast object detector - Active Deformable Part Models">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
@@ -19,7 +19,7 @@
           <a id="forkme_banner" href="https://github.com/dreamdragon/ADPM">View on GitHub</a>
 
           <h1 id="project_title">ADPM</h1>
-          <h2 id="project_tagline">Active Deformable Part Models</h2>
+          <h2 id="project_tagline">Fast object detector - Active Deformable Part Models</h2>
 
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/dreamdragon/ADPM/zipball/master">Download this project as a .zip file</a>
@@ -32,7 +32,7 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h2>
-<a name="about" class="anchor" href="#about"><span class="octicon octicon-link"></span></a>About</h2>
+<a id="about" class="anchor" href="#about" aria-hidden="true"><span class="octicon octicon-link"></span></a>About</h2>
 
 <p>Active Deformable Part Models is an active approach for part-based object detection, which optimizes the order of part filter evaluations and the time at which to stop and make a prediction. During inference, a learned policy is used as a look-up table to choose the part order and the stopping time based on the observed filter responses.</p>
 
@@ -49,7 +49,7 @@ George Pappas and Kostas Daniilidis, arXiv:1404.0334 [cs.CV]
 </code></pre>
 
 <h2>
-<a name="demo" class="anchor" href="#demo"><span class="octicon octicon-link"></span></a>Demo</h2>
+<a id="demo" class="anchor" href="#demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demo</h2>
 
 <p>To run the demo, simply run the following in MATLAB:</p>
 
@@ -68,7 +68,7 @@ compiling the code on your Linux/Mac system.</p>
 and car in the example images.</p>
 
 <h2>
-<a name="api" class="anchor" href="#api"><span class="octicon octicon-link"></span></a>API</h2>
+<a id="api" class="anchor" href="#api" aria-hidden="true"><span class="octicon octicon-link"></span></a>API</h2>
 
 <p>Standalone API for detecting a class of object is 
 provided as the following function call:</p>
@@ -86,7 +86,7 @@ ds:             detection bounding boxes with scores
 </code></pre>
 
 <h2>
-<a name="source-code" class="anchor" href="#source-code"><span class="octicon octicon-link"></span></a>Source Code</h2>
+<a id="source-code" class="anchor" href="#source-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Source Code</h2>
 
 <p>Our implementation is based on the publicly available original DPM and Cascade-DPM code.
 Main detection code is in ./src and ./mex folder. The main detection process is implemented in </p>
@@ -97,12 +97,12 @@ Main detection code is in ./src and ./mex folder. The main detection process is 
 <p>Files under ./external are a subset of publicly available DPM code, refer to ./external/README for copyright.</p>
 
 <h2>
-<a name="models" class="anchor" href="#models"><span class="octicon octicon-link"></span></a>Models</h2>
+<a id="models" class="anchor" href="#models" aria-hidden="true"><span class="octicon octicon-link"></span></a>Models</h2>
 
 <p>Original VOC DPM models and learned policies are contained in ./models. Currently, person and car models are provided. More PASCAL VOC models will be available soon.</p>
 
 <h2>
-<a name="authorights" class="anchor" href="#authorights"><span class="octicon octicon-link"></span></a>AUTHORIGHTS</h2>
+<a id="authorights" class="anchor" href="#authorights" aria-hidden="true"><span class="octicon octicon-link"></span></a>AUTHORIGHTS</h2>
 
 <p>Copyright (C) 2013-2014 Menglong Zhu, Nikolay Atanasov,
                         Samarth Brahmbhatt</p>
@@ -111,7 +111,7 @@ Main detection code is in ./src and ./mex folder. The main detection process is 
 and is available under the terms of an MIT-like license provided in COPYING. Please retain this notice and COPYING if you use this file (or a portion of it) in your project. </p>
 
 <h2>
-<a name="contact" class="anchor" href="#contact"><span class="octicon octicon-link"></span></a>Contact</h2>
+<a id="contact" class="anchor" href="#contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contact</h2>
 
 <p>Please direct all questions to:</p>
 
